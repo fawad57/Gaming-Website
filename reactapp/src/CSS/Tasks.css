@@ -1,0 +1,200 @@
+/* General layout for the tasks page */
+.tasks-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://wallpapers.com/images/high/dark-gaming-1920-x-1200-wallpaper-tkusf3ukacvbbldd.webp")
+    no-repeat center center/cover;
+  padding: 20px;
+}
+
+/* Container for the task form and list */
+.tasks-container {
+  background-color: #2c2c2c;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 1000px; /* Increase max-width for better layout */
+}
+
+/* Heading for the tasks page */
+.tasks-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Form layout for adding tasks */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+/* General form group styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Button for submitting tasks */
+.task-form .submit-button {
+  background-color: #cf311d;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.task-form .submit-button:hover {
+  background-color: #a12815;
+}
+
+/* Layout for the list of tasks */
+.tasks-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pending-tasks,
+.completed-tasks {
+  flex: 1;
+  background-color: #3c3c3c;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.pending-tasks h2,
+.completed-tasks h2 {
+  color: #cf311d;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pending-tasks h2::after,
+.completed-tasks h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #cf311d;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* On hover, the underline expands */
+.pending-tasks h2:hover::after,
+.completed-tasks h2:hover::after {
+  width: 100px;
+}
+
+/* Enhancing the task sections */
+.pending-tasks,
+.completed-tasks {
+  flex: 1;
+  background-color: #3c3c3c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a slight zoom effect on hover */
+.pending-tasks:hover,
+.completed-tasks:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+}
+
+/* Individual task items */
+.task-item {
+  background-color: #4c4c4c;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Slight zoom effect on task hover */
+.task-item:hover {
+  background-color: #5c5c5c;
+  transform: translateY(-3px);
+}
+
+/* Enhancing task title */
+.task-item h3 {
+  color: #cf311d;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+/* Enhancing task description */
+.task-item p {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Small details in task */
+.task-item small {
+  color: #ccc;
+  font-size: 0.875rem;
+}
+
+/* Styling for buttons within the tasks */
+.task-item .complete-button {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #28a745;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.task-item .complete-button.completed {
+  background-color: #28a745;
+  border-color: #218838;
+}
+
+.task-item .complete-button:hover {
+  background-color: #218838;
+}

@@ -1,0 +1,126 @@
+.apply-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://wallpapers.com/images/high/dark-gaming-1920-x-1200-wallpaper-tkusf3ukacvbbldd.webp")
+    no-repeat center center/cover;
+  /* Ensure there's padding around the content */
+}
+
+.form-container {
+  background-color: #2c2c2c;
+  padding: 40px; /* Increased padding for better spacing */
+  border-radius: 10px; /* Slightly larger border radius for a more rounded look */
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+  /* Enhanced shadow for depth */
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+  color: #fff;
+  font-size: 2rem; /* Increased font size for better visibility */
+  font-weight: bold; /* Make the heading bold */
+}
+
+.apply-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased margin for more space between fields */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 500; /* Slightly bolder text for labels */
+}
+
+input,
+select,
+textarea {
+  width: 99%;
+  padding: 12px; /* Increased padding for better usability */
+  border: 1px solid #444; /* Darker border for contrast */
+  border-radius: 5px; /* Slightly larger border radius for a softer look */
+  background-color: #333; /* Background color for input fields */
+  color: #fff; /* Text color for better readability */
+  font-size: 1rem; /* Consistent font size */
+}
+
+textarea {
+  height: 120px; /* Slightly increased height for better text area */
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #cf311d;
+  color: white;
+  padding: 12px 24px; /* Increased padding for a more prominent button */
+  border: none;
+  border-radius: 5px; /* Slightly larger border radius for button */
+  cursor: pointer;
+  font-size: 1rem; /* Consistent font size */
+  font-weight: bold; /* Bold text for the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.submit-button:hover {
+  background-color: #a12815; /* Darker shade for hover effect */
+}
+
+.applications-container {
+  margin-top: 40px; /* Increased margin for better separation */
+  padding: 20px; /* Padding for the container */
+  background-color: #3c3c3c; /* Background color for the container */
+  border-radius: 10px; /* Slightly larger border radius */
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.application {
+  background-color: #4c4c4c;
+  padding: 20px; /* Increased padding for better spacing */
+  border-radius: 5px;
+  margin-bottom: 20px; /* Increased margin for better separation */
+}
+
+.approve-button,
+.reject-button {
+  padding: 8px 16px; /* Consistent padding */
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold; /* Bold text for the buttons */
+  transition: background-color 0.3s;
+}
+
+.approve-button {
+  background-color: #28a745; /* Green color for approve button */
+  color: white;
+}
+
+.approve-button:hover {
+  background-color: #218838; /* Slightly darker green on hover */
+}
+
+.reject-button {
+  background-color: #dc3545; /* Red color for reject button */
+  color: white;
+}
+
+.reject-button:hover {
+  background-color: #c82333; /* Slightly darker red on hover */
+}

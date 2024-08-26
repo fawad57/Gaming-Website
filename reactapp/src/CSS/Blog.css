@@ -1,0 +1,106 @@
+/* Main page layout */
+.blog-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://wallpapers.com/images/high/dark-gaming-1920-x-1200-wallpaper-tkusf3ukacvbbldd.webp")
+    no-repeat center center/cover;
+  padding: 40px;
+}
+
+/* Container for the main content */
+.blog-content {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(90, 90, 90, 0.7);
+  border-radius: 20px;
+  padding: 80px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 1);
+}
+
+/* Main heading */
+.main-heading {
+  color: #f8f9fa;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #cf311d;
+  padding-bottom: 15px;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.main-heading:hover {
+  color: #cf311d;
+  border-bottom-color: #f8f9fa;
+}
+
+/* Container holding all post boxes */
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Each post box */
+.post-box {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Post title */
+.post-box h2 {
+  color: #cf311d;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+  font-size: 24px;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.post-box h2:hover {
+  color: #f8f9fa;
+  border-bottom-color: #cf311d;
+}
+
+/* Post meta information */
+.post-meta {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Post content */
+.post-box p {
+  color: #f8f9fa;
+  transition: color 0.3s ease;
+}
+
+.post-box p:hover {
+  color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-content {
+    padding: 40px;
+  }
+
+  .post-box {
+    padding: 20px;
+  }
+}

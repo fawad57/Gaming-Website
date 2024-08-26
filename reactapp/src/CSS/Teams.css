@@ -1,0 +1,159 @@
+/* Main page layout */
+.teams-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://wallpapers.com/images/high/dark-gaming-1920-x-1200-wallpaper-tkusf3ukacvbbldd.webp")
+    no-repeat center center/cover;
+  padding: 40px;
+}
+
+/* Main container holding the entire content */
+.teams-content {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(53, 51, 51, 0.8);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Main heading */
+.main-heading {
+  color: #f8f9fa;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #cf311d;
+  padding-bottom: 15px;
+}
+
+/* Container holding all team boxes */
+.teams-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.outer-box {
+  flex: 1;
+  background-color: #3c3c3c;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(33.33% - 30px); /* Subtract gap to fit 3 per row */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 250px;
+}
+
+.outer-box h2 {
+  color: #cf311d;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.outer-box h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #cf311d;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* On hover, the underline expands */
+.outer-box h2:hover::after {
+  width: 100px;
+}
+
+/* Enhancing the task sections */
+.outer-box {
+  flex: 1;
+  background-color: #3c3c3c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a slight zoom effect on hover */
+.outer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+}
+
+/* Each team box */
+.team-box {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  max-width: 300px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for team boxes */
+.team-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* Team title */
+.team-box h2 {
+  color: #cf311d;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for team title */
+.team-box:hover h2 {
+  color: #ff4c29;
+}
+
+/* Team details */
+.team-box p {
+  color: #fff;
+  margin: 8px 0;
+}
+
+.team-box strong {
+  color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .outer-box {
+    max-width: calc(50% - 30px); /* Adjust to 2 per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .outer-box {
+    max-width: 100%; /* Adjust to 1 per row on small screens */
+  }
+
+  .teams-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-box {
+    width: 100%;
+  }
+}

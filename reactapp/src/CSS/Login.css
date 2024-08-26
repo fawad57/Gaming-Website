@@ -1,0 +1,93 @@
+.login-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://wallpapercave.com/wp/wp7314538.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the form */
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.error-message {
+  color: #fff;
+  background-color: #e74c3c; /* Red background for error */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+  margin-bottom: 20px;
+}
+
+.login-form {
+  position: relative;
+  padding: 40px;
+  border-radius: 15px;
+  background: #2c2c2c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  max-width: 350px;
+  left: -450px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out; /* Add transition */
+}
+
+.login-form:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.login-form input {
+  width: calc(50% - 10px); /* Half width inputs with margin */
+  padding: 10px;
+  margin: 10px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-form input.full-width {
+  width: calc(100% - 20px); /* Full width input */
+  border-radius: 10px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out; /* Add transition */
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.signup-prompt {
+  text-align: center;
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}

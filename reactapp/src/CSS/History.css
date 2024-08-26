@@ -1,0 +1,127 @@
+/* Main page layout */
+.history-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://wallpapers.com/images/high/dark-gaming-1920-x-1200-wallpaper-tkusf3ukacvbbldd.webp")
+    no-repeat center center/cover;
+  padding: 40px;
+}
+
+/* Main box holding all tasks */
+.main-box {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.history-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Container holding both history sections */
+.history-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Each history box */
+
+.Event-box,
+.application-box {
+  flex: 1;
+  background-color: #3c3c3c;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.Event-box h2,
+.application-box h2 {
+  color: #cf311d;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.Event-box h2::after,
+.application-box h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #cf311d;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.Event-box h2:hover:after,
+.application-box h2:hover::after {
+  width: 300px;
+}
+
+.Event-box,
+.application-box {
+  flex: 1;
+  background-color: #3c3c3c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a slight zoom effect on hover */
+.Event-box:hover,
+.application-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+}
+
+/* Each history item inside the box */
+.history-item {
+  background-color: #4c4c4c;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: #fff;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.history-item:hover {
+  transform: translateY(-5px);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8), 0 6px 18px rgba(0, 0, 0, 0.9);
+}
+
+.history-item p {
+  margin: 8px 0;
+}
+
+.history-item strong {
+  color: #e4e3dc; /* Gold color for emphasis */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tasks-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .history-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.events-container {
+  padding: 0;
+}
+
+.featured-events {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.featured-event {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 1s ease; /* For fade effect */
+  animation: slideLeft 1s forwards; /*Slide in animation*/
+}
+
+.featured-image.enter {
+  animation: slideLeft 1s forwards; /* Slide in animation */
+}
+
+.featured-image.exit {
+  animation: slideOutLeft 1s forwards; /* Slide out animation */
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.featured-info {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  width: 800px; /* Adjusted width to fit within the layout */
+  text-align: justify;
+}
+
+.featured-info h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.featured-info p {
+  font-size: 18px;
+  margin: 5px 0;
+  word-wrap: break-word;
+}
+
+.featured-info p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
+  max-width: 2000px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.left-button {
+  margin-left: 0;
+}
+
+.right-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.event-button {
+  padding: 10px 10px;
+  font-size: 16px;
+  background-color: #f03535;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-button:hover {
+  color: #1c1c1c;
+  font-weight: bold;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #2c2c2c;
+}
+
+.event-card {
+  background: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 270px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.event-card-info {
+  padding: 10px;
+}
+
+.event-card-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.event-card-info p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #bbb;
+}
+
+.right-side {
+  position: absolute;
+  bottom: 30px;
+  left: 0px; /* Align to the left */
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.right-side p {
+  font-size: 16px;
+  word-wrap: break-word;
+  margin: 5px 0;
+}
+
+.right-side p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.event-card-image-container {
+  position: relative; /* Ensure positioning context for the button */
+}
+
+.event-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.plus-sign-overlay {
+  position: absolute;
+  bottom: 10px; /* Position from the bottom */
+  right: 10px; /* Position from the left */
+  width: 30px; /* Adjust width as necessary */
+  height: 30px; /* Adjust height as necessary */
+  background-color: rgb(238, 32, 32); /* Semi-transparent background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35%; /* Circle shape */
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card-image-container:hover .plus-sign-overlay {
+  opacity: 1;
+}
+
+.delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover .delete-button {
+  opacity: 1;
+}
+
+.edit-button {
+  position: absolute;
+  top: 10px;
+  left: 10px; /* Position from the left */
+  background: rgba(0, 0, 255, 0.74);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card-image-container:hover .edit-button {
+  opacity: 1;
+}
