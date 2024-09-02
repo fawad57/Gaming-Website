@@ -67,6 +67,9 @@ app.use(
   })
 );
 
+const Semail = "fastgamingsociety0@gmail.com";
+const password = "quninkjxonmzrtnf";
+
 app.use(passport.session());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
@@ -194,8 +197,8 @@ app.post("/forget-password", (req, res) => {
       port: 465,
       secure: false,
       auth: {
-        user: "i222548@nu.edu.pk",
-        pass: "xumxfopvdmmoqddk",
+        user: Semail,
+        pass: password,
       },
     });
 
@@ -203,7 +206,7 @@ app.post("/forget-password", (req, res) => {
     otpStore[email] = code; // Store OTP against the email.
 
     const mailOptions = {
-      from: "i222548@nu.edu.pk",
+      from: Semail,
       to: email,
       subject: "Reset Password",
       text: `Your OTP is: ${code}`,
@@ -372,13 +375,13 @@ app.post("/approve-events", (req, res) => {
         port: 465,
         secure: false,
         auth: {
-          user: "i222548@nu.edu.pk",
-          pass: "xumxfopvdmmoqddk",
+          user: Semail,
+          pass: password,
         },
       });
 
       const mailOptions = {
-        from: "i222548@nu.edu.pk",
+        from: Semail,
         to: event.email,
         subject: "Event Organization Request Approved!",
         text: `Dear ${event.posted_by},
@@ -485,13 +488,13 @@ app.post("/applications-approve", async (req, res) => {
           port: 465,
           secure: false,
           auth: {
-            user: "i222548@nu.edu.pk",
-            pass: "xumxfopvdmmoqddk",
+            user: Semail,
+            pass: password,
           },
         });
 
         const mailOptions = {
-          from: "i222548@nu.edu.pk",
+          from: Semail,
           to: application.email,
           subject: "Welcome to the Gaming Society! 🎮",
           text: `Dear ${application.name},
@@ -564,13 +567,13 @@ app.post("/reject-events", (req, res) => {
         port: 465,
         secure: false,
         auth: {
-          user: "i222548@nu.edu.pk",
-          pass: "xumxfopvdmmoqddk",
+          user: Semail,
+          pass: password,
         },
       });
 
       const mailOptions = {
-        from: "i222548@nu.edu.pk",
+        from: Semail,
         to: event.email,
         subject: "Event Organization Request Approved!",
         text: `Dear ${event.posted_by},
@@ -644,13 +647,13 @@ app.post("/applications-rejects", (req, res) => {
       port: 465,
       secure: false,
       auth: {
-        user: "i222548@nu.edu.pk",
-        pass: "xumxfopvdmmoqddk",
+        user: Semail,
+        pass: password,
       },
     });
 
     const mailOptions = {
-      from: "i222548@nu.edu.pk",
+      from: Semail,
       to: application.email,
       subject: "Update on Your Gaming Society Application",
       text: `Dear ${application.name},
