@@ -1,3 +1,4 @@
+/* Main container styles */
 .header-container {
   position: fixed;
   top: 0;
@@ -57,10 +58,8 @@
   color: #a12815;
 }
 
+/* Authentication buttons */
 .auth-buttons {
-  /* display: flex;
-    gap: 10px;
-    margin-left: auto; */
   text-decoration: none;
 }
 
@@ -78,4 +77,117 @@
 .auth-buttons .login:hover,
 .auth-buttons .signup:hover {
   background-color: #a12815;
+}
+
+/* 3-Dots Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+}
+
+.menu-icon:hover {
+  color: #a12815;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  position: absolute;
+  right: 50px; /* Adjust the positioning */
+  top: 60px;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  width: 200px; /* Limit the width */
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px 0;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  color: #a12815;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Hide the default nav on small screens */
+  }
+
+  .menu-icon {
+    display: block; /* Show the three-dots menu icon on small screens */
+  }
+}
+/* Profile icon and dropdown */
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%; /* This makes the icon circular */
+  object-fit: fill; /* Ensures that the image fits the circle without distortion */
+  border: 1px solid black; /* Add a slight border for better visual effect */
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  width: 110px;
+}
+
+.profile-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-dropdown ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.profile-dropdown ul li:last-child {
+  border-bottom: none; /* Remove the border for the last item */
+}
+
+.profile-dropdown ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.profile-dropdown ul li:hover {
+  color: #a12815;
+  background-color: rgba(255, 255, 255, 0.1);
 }

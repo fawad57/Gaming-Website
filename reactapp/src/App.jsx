@@ -16,6 +16,7 @@ import Teams from "./Teams";
 import Announcements from "./Announcements";
 import Tasks from "./Tasks";
 import Blog from "./Blog";
+import ProfilePage from "./ProfilePage";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/blog" element={<Blog />} />
         <Route exact path="/" element={<Dashboard />} />
+        <Route path="/profilepage" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );

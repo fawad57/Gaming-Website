@@ -1,0 +1,123 @@
+/* Profile Page Styles */
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #30363d;
+}
+
+.profile-info {
+  margin-left: 20px;
+}
+
+.profile-info h1 {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.profile-info p {
+  color: #8b949e;
+}
+
+.email-link {
+  color: #58a6ff;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.edit-profile {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #238636;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.edit-profile:hover {
+  background-color: #2ea043;
+}
+
+/* Repositories Section */
+.repos-section {
+  margin-top: 40px;
+}
+
+.repos-section h2 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.repo-card {
+  background-color: #161b22;
+  padding: 15px;
+  border-radius: 6px;
+  width: 30%;
+}
+
+.repo-card h3 {
+  font-size: 18px;
+  color: #58a6ff;
+}
+
+.repo-card p {
+  margin: 5px 0;
+  color: #8b949e;
+}
+
+/* Contribution Section */
+.contributions-section {
+  margin-top: 40px;
+}
+
+.contributions-section h2 {
+  font-size: 24px;
+}
+
+.contribution-graph {
+  display: grid;
+  grid-template-columns: repeat(7, 20px);
+  grid-gap: 5px;
+  margin-top: 20px;
+}
+
+.contribution-box {
+  width: 20px;
+  height: 20px;
+  background-color: #21262d;
+}
+
+.contribution-box.active {
+  background-color: #30a14e;
+}
