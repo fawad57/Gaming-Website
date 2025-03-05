@@ -27,7 +27,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-let Saveemail, Saverole, Savename;
+let Saveemail, Saverole, Savename, picture;
 app.use(cookieParse());
 
 app.use(passport.initialize());
@@ -249,7 +249,12 @@ app.post("/verify-otp", (req, res) => {
 
 app.get("/get-role", (req, res) => {
   if (Saveemail) {
-    return res.json({ email: Saveemail, role: Saverole, name: Savename });
+    return res.json({
+      email: Saveemail,
+      role: Saverole,
+      name: Savename,
+      picture: picture,
+    });
   } else {
     res.json("Invalid");
   }
@@ -263,6 +268,7 @@ app.post("/login", (req, res) => {
         Saveemail = member.email;
         Saverole = member.role;
         Savename = member.name;
+        picture = member.profilePicture;
         console.log(Saveemail);
         console.log(Saverole);
         res.json("Success");
@@ -716,6 +722,40 @@ Gaming Society`,
   });
 });
 
+app.post(
+  "/api/upload-profile-picture",
+  upload.single("profilePic"),
+  async (req, res) => {
+    try {
+      const email = req.body.email;
+      const profilePicPath = `uploads\\${req.file.filename}`;
+
+      const result = await MemberModel.updateOne(
+        { email: email },
+        {
+          $set: { profilePicture: profilePicPath },
+        }
+      );
+
+      if (result.nModified === 0) {
+        return res.status(404).json({
+          message: "User not found or profile picture was not updated",
+        });
+      }
+      res.json({
+        message: "Profile picture uploaded successfully!",
+        profilePicPath,
+      });
+    } catch (error) {
+      console.error("Error uploading profile picture:", error);
+      res.status(500).json({
+        message: "An error occurred while uploading the profile picture",
+        error: error.message,
+      });
+    }
+  }
+);
+
 app.post("/signup", (req, res) => {
   const { email } = req.body;
   console.log(email);
@@ -751,6 +791,17 @@ app.post("/logout", (req, res) => {
   Saverole = "";
   res.json("yes");
 });
+
+app.get("/api/get-user-profile/:email", (req, res) => {
+  const email = req.params.email;
+  console.log(email);
+  console.log(picture);
+
+  MemberModel.find({ email: email })
+    .then((member) => res.json(member.profilePicture))
+    .catch((err) => res.json("User not found"));
+});
+
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
 });

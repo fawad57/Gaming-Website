@@ -12,6 +12,7 @@ const MemberSchema = new mongoose.Schema({
     type: String,
     default: "user",
   },
+  profilePicture: String,
 });
 
 const MemberModel = mongoose.model("Members", MemberSchema);

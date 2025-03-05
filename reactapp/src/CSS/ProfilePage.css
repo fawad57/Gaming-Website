@@ -1,12 +1,6 @@
-/* Profile Page Styles */
-body {
-  background-color: #0d1117;
-  color: #c9d1d9;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .profile-container {
-  max-width: 900px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -14,7 +8,8 @@ body {
 .profile-header {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .profile-image {
@@ -22,102 +17,97 @@ body {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #30363d;
+  margin-right: 20px;
+  border: 2px solid #ccc;
 }
 
 .profile-info {
-  margin-left: 20px;
+  flex-grow: 1;
 }
 
-.profile-info h1 {
-  font-size: 28px;
-  color: #ffffff;
+.profile-name-input,
+.profile-username-input,
+.profile-email-input {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.profile-info p {
-  color: #8b949e;
+.password-section {
+  margin-top: 20px;
 }
 
-.email-link {
-  color: #58a6ff;
-  text-decoration: none;
+.password-input {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-profile-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-profile-btn:hover {
+  background-color: #45a049;
+}
+
+input[type="file"] {
   margin-top: 10px;
-  display: block;
+  display: none;
 }
 
-.email-link:hover {
-  text-decoration: underline;
+.upload-label {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.upload-label:hover {
+  background-color: #0069d9;
 }
 
 .edit-profile {
   margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #238636;
-  color: #ffffff;
-  border: none;
+  padding: 8px 15px;
+  background-color: #ffc107;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 6px;
+  font-size: 16px;
 }
 
 .edit-profile:hover {
-  background-color: #2ea043;
+  background-color: #e0a800;
 }
 
-/* Repositories Section */
-.repos-section {
-  margin-top: 40px;
+.upload-section {
+  position: relative;
 }
 
-.repos-section h2 {
-  font-size: 24px;
-  color: #ffffff;
+.upload-section:hover .edit-profile {
+  display: block;
 }
 
-.repos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.repo-card {
-  background-color: #161b22;
-  padding: 15px;
-  border-radius: 6px;
-  width: 30%;
-}
-
-.repo-card h3 {
-  font-size: 18px;
-  color: #58a6ff;
-}
-
-.repo-card p {
-  margin: 5px 0;
-  color: #8b949e;
-}
-
-/* Contribution Section */
-.contributions-section {
-  margin-top: 40px;
-}
-
-.contributions-section h2 {
-  font-size: 24px;
-}
-
-.contribution-graph {
-  display: grid;
-  grid-template-columns: repeat(7, 20px);
-  grid-gap: 5px;
-  margin-top: 20px;
-}
-
-.contribution-box {
-  width: 20px;
-  height: 20px;
-  background-color: #21262d;
-}
-
-.contribution-box.active {
-  background-color: #30a14e;
+.edit-profile {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 10px;
 }

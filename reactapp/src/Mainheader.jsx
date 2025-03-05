@@ -22,10 +22,8 @@ const Mainheader = () => {
       if (result.data !== "Invalid") {
         setEmail(result.data.email);
         setRole(result.data.role);
-        // Update profile picture if available
-        if (result.data.profilePicture) {
-          setProfilePicture(result.data.profilePicture); // Set user profile picture
-        }
+        setProfilePicture(result.data.picture);
+        console.log(result.data.picture);
       }
     });
   };
@@ -125,7 +123,11 @@ const Mainheader = () => {
           {role && (
             <div className="profile-container">
               <img
-                src={profilePicture}
+                src={
+                  profilePicture
+                    ? `http://localhost:3001/${profilePicture}`
+                    : DefaultProfileIcon
+                }
                 alt="Profile"
                 className="profile-icon"
                 onClick={toggleProfileDropdown}
